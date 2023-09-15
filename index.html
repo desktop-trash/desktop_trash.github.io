@@ -1,12 +1,35 @@
 <!DOCTYPE html>
+<html>
 <head>
-  Website Example
+    <meta charset="UTF-8">
+    <title>Portfolio Site</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-
 <body>
-  <p>hello world :)</p>
-  <a href="page2.html">my link</a>
-  <p> Hello world, again!</p>
+    <div id="wrapper">
+        <div class="nav">
+            <nav>
+                <ul>
+                    <li><img src="images\GSAf.gif" alt="spinning wireframe sphere" align="right"></li>
+                    <li><a href="#" class="nav_button">CONTACT</a></li>
+                    <li><a href="#" class="nav_button">ABOUT</a></li>
+                    <li><a href="#" class="nav_button">MUSIC</a></li>
+                    <li><a href="#" class="nav_button"id="games_button">GAMES</a></li>
+                    <li><a href="#" class="nav_button" id="home_button">HOME</a></li>
+                </ul>
+            </nav>          
+        </div>
+    </div>  
 </body>
-
+<script>
+    $("a").filter(".nav_button").hover(function() {
+        $(this).animate({ fontSize: "40px", paddingRight: "100px" }, 200, "swing");
+    });
+    $("a").filter(".nav_button").mouseleave(function() {
+        $(this).stop();
+        $(this).clearQueue();
+        $(this).animate({ fontSize: "32px", paddingRight: "0px"}, 100, "linear");
+    });
+</script>
 </html>
