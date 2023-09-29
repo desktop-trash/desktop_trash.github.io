@@ -1,5 +1,7 @@
 body {
-    background-color: black;
+    background-image: url("images/waves3.gif");
+    background-size: cover;
+    background-attachment: fixed;
     color: chartreuse;
     display: flex;
     justify-content: center;
@@ -7,10 +9,25 @@ body {
 
 nav,li {
     list-style-type: none;
+    margin-bottom: 2px;
 }
 
-nav {
-    text-align: right;
+p {
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.666);
+    margin: 20px;
+    margin-left: 10%;
+    margin-right: 30%;
+    padding: 20px;
+}
+
+P::selection {
+    background-color: rgba(255, 255, 0, 0.5);
+    color: rgb(64, 0, 0);
+}
+
+img {
+    box-shadow: 15px 15px 5px rgba(255, 255, 0, 0.2);
 }
 
 .nav_button {
@@ -23,8 +40,27 @@ nav {
 }
 
 .nav_button:hover {
-    color: red;
+    color: rgb(255, 0, 0);
     border: 1px solid rgb(255, 0, 0);
+    background-color: rgba(256, 256, 0, 0.1);
+}
+
+#header{
+    width: 100%;
+}
+
+#nav {
+    text-align: right;
+    margin-left: 0;
+}
+
+#titlecard {
+    margin-right: 0;
+    display: none;
+    font-family: monospace;
+    font-size: 24px;
+    text-align: right;
+    color: rgba(255, 255, 0, 0.8);
 }
 
 #wrapper {
@@ -32,3 +68,10 @@ nav {
     text-align: center;
 }
 
+@media only screen and (max-width: 800px){
+    p {
+        margin: 15px;
+        margin-left: 15px;
+        margin-right: 45px;
+    }
+}

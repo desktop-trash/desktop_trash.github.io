@@ -8,28 +8,46 @@
 </head>
 <body>
     <div id="wrapper">
-        <div class="nav">
-            <nav>
+        <div id="header">
+            <div id="titlecard">
+                <h1><i>desktop_trash.net</i></h1>
+            </div>
+            <div id="nav">
                 <ul>
-                    <li><img src="images\GSAf.gif" alt="spinning wireframe sphere" align="right"></li>
+                    <li><img id="globe" src="images\GSAf.gif" alt="spinning wireframe sphere" align="right"></li>
                     <li><a href="#" class="nav_button">CONTACT</a></li>
                     <li><a href="#" class="nav_button">ABOUT</a></li>
                     <li><a href="#" class="nav_button">MUSIC</a></li>
                     <li><a href="#" class="nav_button"id="games_button">GAMES</a></li>
                     <li><a href="#" class="nav_button" id="home_button">HOME</a></li>
                 </ul>
-            </nav>          
+            </div>
         </div>
+        <div id="main">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium quam vulputate dignissim suspendisse in. Enim lobortis scelerisque fermentum dui faucibus in ornare quam. Orci eu lobortis elementum nibh tellus molestie nunc. Sit amet commodo nulla facilisi nullam vehicula ipsum a arcu. Leo duis ut diam quam nulla. At urna condimentum mattis pellentesque id. Orci a scelerisque purus semper eget. Eget nunc lobortis mattis aliquam faucibus. Hendrerit gravida rutrum quisque non tellus orci. Mattis pellentesque id nibh tortor id aliquet lectus. Magna sit amet purus gravida quis blandit. Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a. Amet nisl purus in mollis nunc sed id semper.
+                <br><br>Nam aliquam sem et tortor consequat. Praesent elementum facilisis leo vel fringilla. Dictum non consectetur a erat. Quam elementum pulvinar etiam non quam lacus. Eu augue ut lectus arcu bibendum at varius vel pharetra. Nibh sit amet commodo nulla facilisi. Ultricies integer quis auctor elit sed vulputate mi. Erat imperdiet sed euismod nisi porta lorem mollis aliquam. Neque laoreet suspendisse interdum consectetur libero. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor eu. Cras ornare arcu dui vivamus arcu felis bibendum. Rhoncus urna neque viverra justo nec ultrices dui. Dui id ornare arcu odio. Porttitor lacus luctus accumsan tortor. Congue quisque egestas diam in arcu cursus euismod quis. In hendrerit gravida rutrum quisque non tellus orci. Pharetra convallis posuere morbi leo urna molestie. Feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper.
+                <br><br>Quisque sagittis purus sit amet volutpat consequat mauris nunc. Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec. Quis varius quam quisque id diam. Lacus sed turpis tincidunt id aliquet risus. Nunc aliquet bibendum enim facilisis gravida neque convallis a. Consectetur lorem donec massa sapien faucibus et molestie ac feugiat. Pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Praesent tristique magna sit amet purus gravida quis blandit. Gravida arcu ac tortor dignissim convallis aenean et tortor. Aliquet enim tortor at auctor urna nunc id cursus.
+            </p>
+        </div>  
     </div>  
 </body>
 <script>
     $("a").filter(".nav_button").hover(function() {
-        $(this).animate({ fontSize: "40px", paddingRight: "100px" }, 200, "swing");
-    });
-    $("a").filter(".nav_button").mouseleave(function() {
-        $(this).stop();
         $(this).clearQueue();
-        $(this).animate({ fontSize: "32px", paddingRight: "0px"}, 100, "linear");
+        $(this).animate({ paddingRight: "100px" }, 200, "swing");
+    });
+    $(".nav_button").mouseleave(function() {
+        $(this).clearQueue();
+        $(this).animate({ paddingRight: "0px"}, 300, "swing");
+    });
+
+    $(document).ready(function() {
+        $("#titlecard").fadeIn(2000);
+    });
+
+    $("#globe").hover(function() {
+
     });
 </script>
 </html>
